@@ -13,9 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 const port = process.env.PORT || 3001
 
-app.listen(port, (req, res) =>{
-console.log(`Estou rodando na porta ${port}`)
-})
+app.listen(port)
 
 const pokedexObj = {
     "pokemon": [{
