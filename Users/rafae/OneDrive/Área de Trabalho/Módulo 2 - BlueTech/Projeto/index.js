@@ -1,5 +1,8 @@
 import express from 'express'
 import path from 'path'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const __dirname = path.resolve(path.dirname(''))
 
@@ -8,7 +11,7 @@ app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-const port = 3001
+const port = process.env.PORT || 3001
 
 app.listen(port, (req, res) =>{
 console.log(`Estou rodando na porta ${port}`)
